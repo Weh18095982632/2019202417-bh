@@ -1,0 +1,42 @@
+<RCC>
+    <qresource prefix="/">
+        <file>config/Info.plist</file>
+        <file>config/TowersPosition.plist</file>
+        <file>config/Waves.plist</file>
+        <file>image/Bg.png</file>
+        <file>image/bullet.png</file>
+        <file>image/enemy.png</file>
+        <file>image/Icon.ico</file>
+        <file>image/icon.jpg</file>
+        <file>image/icon_gold.png</file>
+        <file>image/icon_HP.png</file>
+        <file>image/open_spot.png</file>
+        <file>image/bg1.jpg</file>
+        <file>image/bg2.jpg</file>
+        <file>image/bg3.jpg</file>
+        <file>image/min_h.png</file>
+        <file>image/min_n.png</file>
+        <file>image/music_n.png</file>
+        <file>image/startgame.png</file>
+        <file>image/close_h.png</file>
+        <file>image/close_n.png</file>
+        <file>image/music_h.png</file>
+        <file>image/map_31.png</file>
+        <file>image/map_32.png</file>
+        <file>image/towerPos.png</file>
+        <file>image/tower.png</file>
+        <file>image/11.png</file>
+        <file>image/12.png</file>
+        <file>image/13.png</file>
+        <file>image/21.png</file>
+        <file>image/22.png</file>
+        <file>image/23.png</file>
+        <file>image/31.png</file>
+        <file>image/32.png</file>
+        <file>image/33.png</file>
+        <file>image/12lower.png</file>
+        <file>image/40.png</file>
+        <file>image/41.png</file>
+        <file>config/launch_sound.wav</file>
+    </qresource>
+</RCC>

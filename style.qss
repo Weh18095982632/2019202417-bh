@@ -1,0 +1,12 @@
+QPushButton#btn_time
+{
+ border-image:url(:/image/icon.jpg);
+}
+QPushButton#btn_time:hover
+{
+ border-image:url(:/image/icon.jpg);
+}
+QPushButton#btn_time:pressed,QPushButton#btn_time:checked
+{
+ border-image:url(:/image/icon.jpg);
+}
