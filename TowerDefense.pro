@@ -33,7 +33,8 @@ SOURCES += \
     fearfulenemy.cpp \
     homedialog.cpp \
     screeningdialog.cpp \
-    startwindow.cpp
+    startwindow.cpp \
+    mypushbutton.cpp
 
 HEADERS += \
     mywidget.h \
@@ -44,7 +45,8 @@ HEADERS += \
     fearfulenemy.h \
     homedialog.h \
     screeningdialog.h \
-    startwindow.h
+    startwindow.h \
+    mypushbutton.h
 
 FORMS += \
     homedialog.ui \

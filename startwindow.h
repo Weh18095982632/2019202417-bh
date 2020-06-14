@@ -8,6 +8,8 @@
 #include <QMouseEvent>
 #include <QMediaPlayer>
 
+#include "mypushbutton.h"
+
 namespace Ui {
 class StartWindow;
 }

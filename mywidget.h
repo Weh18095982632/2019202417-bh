@@ -35,6 +35,7 @@ public:
     QList<FearfulEnemy *> m_enemyList;
     int m_waves;
     bool m_gameWin;
+    int m_currentTower;
 
 public:
     void loadTowerPositions();
