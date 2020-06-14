@@ -22,7 +22,6 @@ public:
 
     //重写按钮 按下 和 释放事件
     void mousePressEvent(QMouseEvent *e);
-
     void mouseReleaseEvent(QMouseEvent *e);
 signals:
 
