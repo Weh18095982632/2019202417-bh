@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QSound>
+#include <QDir>
 
 StartWindow::StartWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,7 +15,7 @@ StartWindow::StartWindow(QWidget *parent) :
     //设置标题
     this->setWindowTitle("Tower Defense");
 
-    this->setFixedSize(570,755);
+    this->setFixedSize(452,600);
 
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setWindowOpacity(1);
@@ -42,13 +43,13 @@ StartWindow::StartWindow(QWidget *parent) :
     btn_min=new QPushButton(this) ;
     btn_min->setObjectName("btn_min");
     btn_min->setStyleSheet("#btn_min{border-image:url(:/image/min_n.png);}#btn_min:hover{border-image:url(:/image/min_h.png);}");
-    btn_min->setFixedSize(40,40);
+    btn_min->setFixedSize(32,32);
     btn_min->setToolTip(QString::fromLocal8Bit("最小化"));
 
     btn_close=new QPushButton(this) ;
     btn_close->setObjectName("btn_close");
     btn_close->setStyleSheet("#btn_close{border-image:url(:/image/close_n.png);}#btn_close:hover{border-image:url(:/image/close_h.png);}");
-    btn_close->setFixedSize(40,40);
+    btn_close->setFixedSize(32,32);
     btn_close->setToolTip(QString::fromLocal8Bit("关闭"));
 
     QHBoxLayout *hb=new QHBoxLayout(this);
@@ -62,11 +63,14 @@ StartWindow::StartWindow(QWidget *parent) :
 
     btn_startGame=new QPushButton(this) ;
     btn_startGame->setObjectName("btn_startGame");
-    btn_startGame->setStyleSheet("#btn_startGame{border-image:url(:/image/startgame.png);}");
+    btn_startGame->setStyleSheet("#btn_startGame{border-image:url(:/image/startgame.png);}#btn_startGame:hover{border-image:url(:/image/startgame_h.png);}");
     btn_startGame->setFixedSize(220,76);
     btn_startGame->setToolTip(QString::fromLocal8Bit("开始游戏"));
 
-    btn_startGame->setGeometry(175,500,220,76);
+    btn_startGame->setGeometry(115,420,220,55);
+
+    //QString str = QDir::currentPath();
+    //QMessageBox::information(this, "路径2", str, QMessageBox::Ok, QMessageBox::NoButton);
 
     connect(btn_close,SIGNAL(clicked()),this,SLOT(onClose()));
     connect(btn_min,SIGNAL(clicked()),this,SLOT(onMin()));
@@ -104,12 +108,27 @@ void StartWindow::mouseReleaseEvent(QMouseEvent *e)
 }
 void StartWindow::onOpenMusic()
 {
+    if(homedlg.mywidget.audioPlayer()->openmusic)
+    {
+        homedlg.mywidget.audioPlayer()->m_backgroundMusic->stop();
+        btn_music->setStyleSheet("#btn_music{border-image:url(:/image/music_n.png);}");
+
+    }
+    else
+    {
+        homedlg.mywidget.audioPlayer()->m_backgroundMusic->play();
+        btn_music->setStyleSheet("#btn_music{border-image:url(:/image/music_h.png);}");
+    }
+    homedlg.mywidget.audioPlayer()->openmusic=!homedlg.mywidget.audioPlayer()->openmusic;
 
 }
 
 void StartWindow::onOK()
 {
+    //homedlg=new HomeDialog(this);
+    //homedlg->show();
     homedlg.show();
+    //homedlg.mywidget.repaint();
 }
 void StartWindow::onClose()
 {

@@ -4,8 +4,11 @@
 #include <QDialog>
 #include <QPushButton>
 #include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QPixmap>
+#include <QLabel>
 #include <QMouseEvent>
+#include <QMessageBox>
 
 namespace Ui {
 class ScreeningDialog;
@@ -40,10 +43,8 @@ public:
     void mouseReleaseEvent(QMouseEvent *e);
 
 public:
-    bool mIsPress;
-    QPoint StartPos;
-public:
     QPushButton *btn_close;
+    QPushButton *btn_close1;
     QPushButton *btn_screen1;
     QPushButton *btn_screen2;
     QPushButton *btn_screen3;
@@ -51,12 +52,19 @@ public:
     QPushButton *btn_screen5;
     QPushButton *btn_screen6;
     QPushButton *btn_screen7;
-
     QPushButton *btn_ok;
 
+    QLabel *label1;
+    QLabel *label2;
+    QLabel *label3;
 public:
-    bool m_nowScreen;
+    bool mIsPress;
+    QPoint StartPos;
+    int m_nowScreen;
     QPixmap m_nowImg;
+
+signals:
+    void updateScreen();
 
 };
 

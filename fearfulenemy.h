@@ -11,16 +11,24 @@ class QPainter;
 class MyWidget;
 class Tower;
 
-class FearfulEnemy
+class FearfulEnemy: public QObject
 {
+//    Q_OBJECT
 public:
     FearfulEnemy(WayPoint *startWayPoint, MyWidget *game, const QPixmap &sprite = QPixmap(":/image/enemy.png"));
+    ~FearfulEnemy();
 
 public slots:
     void doActivate();
 
 public:
+    void draw(QPainter *painter) const;
     void move();
+    void getDamage(int damage);
+    void getRemoved();
+    void getAttacked(Tower *attacker);
+    void gotLostSight(Tower *attacker);
+    QPoint pos() const;
 
 private:
     bool			m_active;

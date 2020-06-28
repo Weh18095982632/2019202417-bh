@@ -13,7 +13,6 @@
         <file>image/open_spot.png</file>
         <file>image/bg1.jpg</file>
         <file>image/bg2.jpg</file>
-        <file>image/bg3.jpg</file>
         <file>image/min_h.png</file>
         <file>image/min_n.png</file>
         <file>image/music_n.png</file>
@@ -35,8 +34,31 @@
         <file>image/32.png</file>
         <file>image/33.png</file>
         <file>image/12lower.png</file>
-        <file>image/40.png</file>
-        <file>image/41.png</file>
         <file>config/launch_sound.wav</file>
+        <file>image/startgame_h.png</file>
+        <file>image/home_bg.png</file>
+        <file>image/11lower.png</file>
+        <file>image/13lower.png</file>
+        <file>image/21lower.png</file>
+        <file>image/22lower.png</file>
+        <file>image/23lower.png</file>
+        <file>image/31lower.png</file>
+        <file>image/32lower.png</file>
+        <file>image/33lower.png</file>
+        <file>image/skill0.png</file>
+        <file>image/skill50.png</file>
+        <file>image/skill100.png</file>
+        <file>image/bg3.png</file>
+        <file>image/menu_h.png</file>
+        <file>image/menu_n.png</file>
+        <file>image/level.png</file>
+        <file>image/level1.png</file>
+        <file>image/level2.png</file>
+        <file>image/unknow.png</file>
+        <file>image/no.png</file>
+        <file>image/ok.png</file>
+        <file>image/touming.png</file>
+        <file>image/title.png</file>
+        <file>image/boss.png</file>
     </qresource>
 </RCC>

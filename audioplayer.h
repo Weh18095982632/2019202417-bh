@@ -1,4 +1,4 @@
-#ifndef AUDIOPLAYER_H
+﻿#ifndef AUDIOPLAYER_H
 #define AUDIOPLAYER_H
 
 #include <QObject>
@@ -21,8 +21,9 @@ public:
 	void startBGM();
 	void playSound(SoundType soundType);
 
-private:
+public:
 	QMediaPlayer *m_backgroundMusic; // 只用来播放背景音乐
+    bool openmusic;
 };
 
 

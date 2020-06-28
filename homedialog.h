@@ -6,8 +6,11 @@
 #include <QHBoxLayout>
 #include <QMainWindow>
 #include <QMouseEvent>
+#include <QMediaPlayer>
+#include <QSoundEffect>
 #include "mywidget.h"
 #include "mainwindow.h"
+#include "screeningdialog.h"
 
 namespace Ui {
 class HomeDialog;
@@ -29,6 +32,23 @@ public slots:
     void onOK();
     void onClose();
     void onMin();
+    void onMenu();
+
+    void oncurrentTower1();
+    void oncurrentTower2();
+    void oncurrentTower3();
+    void oncurrentTower4();
+    void oncurrentTower5();
+    void oncurrentTower6();
+    void oncurrentTower7();
+    void oncurrentTower8();
+    void oncurrentTower9();
+
+
+
+    void updateScreenToMyWidget();
+    void updategold(int gold);
+    void updategoldText(QString text);
 
 public:
     void mousePressEvent(QMouseEvent *e);
@@ -40,15 +60,17 @@ public:
     QPoint StartPos;
 public:
     QPushButton *btn_music;
+    QPushButton *btn_menu;
     QPushButton *btn_min;
     QPushButton *btn_close;
 
 public:
     MyWidget mywidget;
+    ScreeningDialog *dlg;
 
 public:
     bool m_openmusic;
-
+    int m_currentScreen;
 };
 
 #endif // HOMEDIALOG_H

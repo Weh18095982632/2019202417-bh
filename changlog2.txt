@@ -1,0 +1,25 @@
+1，完善各个类使得游戏得以完成。
+2，添加了audioplayer类，设置了游玩时的各种声音并继承QObject类
+                TowerPlaceSound,		// 放塔时的声音
+	LifeLoseSound,		// 基地费血时的声音
+	LaserShootSound,		// 打中敌人时的声音
+	EnemyDestorySound	// 敌人死亡时的声音
+并用QMediaPlayer *m_backgroundMusic   来播放背景音乐
+3，添加bullet类，
+               Bullet::Bullet(QPoint startPos, QPoint targetPoint, int damage, FearfulEnemy *target,
+               MyWidget *game, const QPixmap &sprite/* = QPixmap(":/image/bullet.png")*/)
+	: m_startPos(startPos)
+	, m_targetPos(targetPoint)
+	, m_sprite(sprite)
+	, m_currentPos(startPos)
+	, m_target(target)
+	, m_game(game)
+	, m_damage(damage)   构造子弹
+4，完善了tower类，使得防御塔可以正常设置、安放和攻击
+void Tower::checkEnemyInRange()//检查敌人是否在攻击范围内
+void Tower::draw(QPainter *painter) const//设置炮塔攻击范围
+void Tower::attackEnemy()//攻击敌人
+void Tower::chooseEnemyForAttack(FearfulEnemy *enemy//选择攻击范围内的敌人
+void Tower::shootWeapon()//攻击效果
+void Tower::targetKilled()//击杀敌人
+void Tower::lostSightOfEnemy()//如果敌人超出范围，则停止攻击

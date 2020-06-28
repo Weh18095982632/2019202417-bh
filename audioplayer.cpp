@@ -13,7 +13,7 @@ AudioPlayer::AudioPlayer(QObject *parent)
 	, m_backgroundMusic(NULL)
 {
 	// 创建一直播放的背景音乐
-    QUrl backgroundMusicUrl = QUrl::fromLocalFile(s_curDir + "music/8bitDungeonLevel.mp3");
+    QUrl backgroundMusicUrl = QUrl::fromLocalFile(s_curDir + "TowerDefense/music/8bitDungeonLevel.mp3");
 	if (QFile::exists(backgroundMusicUrl.toLocalFile()))
 	{
 		m_backgroundMusic = new QMediaPlayer(this);
@@ -26,6 +26,8 @@ AudioPlayer::AudioPlayer(QObject *parent)
 		backgroundMusicList->setPlaybackMode(QMediaPlaylist::CurrentItemInLoop);
 		m_backgroundMusic->setPlaylist(backgroundMusicList);
 	}
+
+    openmusic=true;
 }
 
 void AudioPlayer::startBGM()
@@ -38,10 +40,10 @@ void AudioPlayer::playSound(SoundType soundType)
 {
 	static const QUrl mediasUrls[] =
 	{
-		QUrl::fromLocalFile(s_curDir + "music/tower_place.wav"),
-		QUrl::fromLocalFile(s_curDir + "music/life_lose.wav"),
-		QUrl::fromLocalFile(s_curDir + "music/laser_shoot.wav"),
-		QUrl::fromLocalFile(s_curDir + "music/enemy_destroy.wav")
+        QUrl::fromLocalFile(s_curDir + "TowerDefense/music/tower_place.wav"),
+        QUrl::fromLocalFile(s_curDir + "TowerDefense/music/life_lose.wav"),
+        QUrl::fromLocalFile(s_curDir + "TowerDefense/music/laser_shoot.wav"),
+        QUrl::fromLocalFile(s_curDir + "TowerDefense/music/enemy_destroy.wav")
 	};
 	static QMediaPlayer player;
 
